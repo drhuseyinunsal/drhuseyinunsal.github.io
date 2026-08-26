@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzm. Dr. Hüseyin Ünsal | İç Hastalıkları Uzmanı & Mobil Uygulama Geliştirici</title>
+    <!-- Google Fonts ve FontAwesome İkonları -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #06b6d4;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Bölümü */
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1e1b4b 100%);
+            color: white;
+            padding: 100px 20px 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: var(--bg-light);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0);
+        }
+
+        .profile-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-subtitle {
+            font-size: 1.4rem;
+            color: var(--accent);
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #cbd5e1;
+            font-size: 1.1rem;
+        }
+
+        /* Ana Konteyner */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* İkili Kart Yapısı */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        /* İstatistik Bölümü */
+        .stats-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+            margin-bottom: 50px;
+        }
+
+        .stats-section h2 {
+            margin-bottom: 30px;
+            color: var(--secondary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-box {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* İletişim Bölümü */
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+
+        .contact-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Mobil Uyum */
+        @media (max-width: 768px) {
+            .profile-title { font-size: 2rem; }
+            .profile-subtitle { font-size: 1.2rem; }
+            .card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero / Giriş Alanı -->
+    <header>
+        <h1 class="profile-title">Uzm. Dr. Hüseyin Ünsal</h1>
+        <div class="profile-subtitle">İç Hastalıkları Uzmanı & Mobil Uygulama Geliştirici</div>
+        <p class="tagline">Tıp biliminin klinik tecrübesini, modern teknolojinin gücüyle birleştirerek sağlık dünyasına yönelik dijital çözümler üretiyorum.</p>
+    </header>
+
+    <!-- Ana İçerik -->
+    <div class="container">
+        
+        <!-- Uzmanlık Alanları -->
+        <div class="grid">
+            <!-- Tıbbi Kimlik -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-stethoscopes"></i></div>
+                <h2>Klinik Uzmanlık</h2>
+                <p>İç hastalıkları (Dahiliye) uzmanı olarak edindiğim tıbbi birikimle, sahadaki hekimlerin ve hastaların gerçek ihtiyaçlarını analiz ediyorum. Teorik bilgiyi pratik çözümlere dönüştürüyorum.</p>
+            </div>
+
+            <!-- Yazılım Kimliği -->
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                <h2>Yazılım Teknolojileri</h2>
+                <p><strong>.NET MAUI</strong> çatısı altında C# kullanarak hem Android hem de iOS platformları için yerel (native) performanslı mobil uygulamalar geliştiriyorum. Sağlık teknolojilerinde yenilikçi adımlar atıyorum.</p>
+            </div>
+        </div>
+
+        <!-- Portföy İstatistikleri -->
+        <div class="stats-section">
+            <h2>Yayınlanan Mobil Uygulamalarım</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">18</div>
+                    <div class="stat-label">Google Play Store</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Apple App Store</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="stat-label">Çoğunluğu Tıbbi Odaklı</div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Öne Çıkan Uygulamalar Bölümü -->
+        <div class="apps-showcase">
+            <h2 style="text-align: center; color: var(--secondary); margin-bottom: 30px;">Öne Çıkan Uygulamalar (Tasarım aşamasındadır)</h2>
+            <div class="apps-grid">
+                
+                <!-- Uygulama 1 -->
+                <div class="app-card">
+                    <div class="app-icon"><i class="fa-solid fa-file-medical"></i></div>
+                    <h3>İlaç Takip & Rapor</h3>
+                    <p>Hastalara yönelik ilaç kullanım hatırlatıcı ve rapor yönetim asistanı.</p>
+                     <!-- 
+                    <div class="app-links">
+                        <a href="BURAYA_PLAY_STORE_LINKI" target="_blank" class="app-btn play"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                        <a href="BURAYA_APPLE_STORE_LINKI" target="_blank" class="app-btn apple"><i class="fa-brands fa-apple"></i> App Store</a>
+                    </div>
+                     -->
+                </div>
+
+                <!-- Uygulama 2 -->
+                <div class="app-card">
+                    <div class="app-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h3>Tıbbi Hesaplama</h3>
+                    <p>Hekimler için GFR, BMI ve diğer kritik klinik skorlama araçları.</p>
+                      <!-- 
+                    <div class="app-links">
+                        <a href="BURAYA_PLAY_STORE_LINKI" target="_blank" class="app-btn play"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                    </div>
+                    -->
+                </div>
+
+                <!-- Uygulama 3 -->
+                <div class="app-card">
+                    <div class="app-icon"><i class="fa-solid fa-book-medical"></i></div>
+                    <h3>Dahiliye Rehberi</h3>
+                    <p>Güncel klinik protokoller ve tanı-tedavi algoritmaları üzerine uzman rehber.</p>
+                      <!-- 
+                    <div class="app-links">
+                        <a href="BURAYA_PLAY_STORE_LINKI" target="_blank" class="app-btn play"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                    </div>
+                    -->
+                </div>
+
+            </div>
+        </div>
+
+        <style>
+            /* Yeni Uygulama Kartları Stilleri */
+            .apps-showcase { margin-bottom: 50px; }
+            .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+            .app-card { background: white; padding: 30px; border-radius: 20px; text-align: center; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
+            .app-card:hover { border-color: var(--primary); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); }
+            .app-icon { font-size: 3rem; color: var(--accent); margin-bottom: 15px; }
+            .app-card h3 { color: var(--secondary); margin-bottom: 10px; font-size: 1.25rem; }
+            .app-card p { font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px; min-height: 45px; }
+            .app-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+            .app-btn { padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: opacity 0.2s; }
+            .app-btn.play { background-color: #000; color: #fff; }
+            .app-btn.apple { background-color: #555; color: #fff; }
+            .app-btn:hover { opacity: 0.8; }
+        </style>
+
+        <!-- İletişim Alanı -->
+        <div class="contact-section">
+            <a href="mailto:drhuseyinunsal@gmail.com" class="contact-btn">
+                <i class="fa-solid fa-envelope"></i> Benimle İletişime Geçin
+            </a>
+        </div>
+
+    </div>
+
+ <!-- Footer Bölümü -->
+    <footer>
+        <p>&copy; 2026 Uzm. Dr. Hüseyin Ünsal. Tüm Hakları Saklıdır.</p>
+        <p style="margin-top: 10px;">
+            <a href="privacy.html" style="color: #64748b; text-decoration: none; font-weight: 600; border-bottom: 1px dashed #cbd5e1;">Gizlilik Politikası (Privacy Policy)</a>
+        </p>
+    </footer>
+
+</body>
+</html>
